@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#About-Me {
+  background-color:#24272b;
+  height: 1000px;
+}
+
+#top {
+  background-color: #ffffff;
+  height:25%;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top:50%;
+  left: 0;
+  font-size: 90px;
+  font-family: jsMath-cmbx10;
+  color:white;
+}
