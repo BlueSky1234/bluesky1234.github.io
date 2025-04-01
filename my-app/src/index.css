@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -14,15 +14,16 @@ body {
 
 #top {
   background-color: #ffffff;
-  height:25%;
+  height:100px;
   width: 100%;
 }
 
 .header {
-  position: absolute;
-  top:50%;
-  left: 0;
-  font-size: 90px;
-  font-family: jsMath-cmbx10;
-  color:white;
+  height: '100vh';
+} */
+
+.col {
+  background-color: aqua;
+  width: 50;
+  height: 50;
 }
