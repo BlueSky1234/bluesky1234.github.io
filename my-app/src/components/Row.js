@@ -1,3 +1,3 @@
-export default function Row({children}) {
-    <div className="row">{children}</div>
+export default function Row({children, className = "row"}) {
+    return (<div className={className}>{children}</div>);
 }
