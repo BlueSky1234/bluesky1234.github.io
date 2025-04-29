@@ -58,12 +58,12 @@ body, html {
 } 
 
 #welcome {
-    height: 1000vh;
+    height: 500vh;
     width: 100vw;
     background-color: #141414;
     color: white;
     font-family: garamond, serif;
-    font-size: 5vh;
+    font-size: 5rem;
 }
 
 #text-left {
@@ -71,20 +71,28 @@ body, html {
     position: sticky;
     top: 30vh;
     width: 50vw;
-    left: 5vw;
+    left: 10vw;
+    font-size: 10vw;
 }
 
 #text-right {
     text-align: right;
     position: sticky;
-    top: 60vh;
-    left: 40vw;
+    top: 50vh;
+    left: 30vw;
     width: 50vw;
-    font-size: 10vh;
+    font-size: 17vw;
+
 }
 
 #text-center {
     text-align: center;
     position: sticky;
-    top:80vh;
+    top:50vh;
+    font-size: 7vw;
+}
+
+#text-center, #text-left, #text-right {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }

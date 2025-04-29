@@ -1,33 +1,41 @@
+let currentSection;
 
 window.addEventListener('scroll', () => {
     let scrollY = window.scrollY;
+    let viewportHeight = window.innerHeight;
+    let scrollYInVH = (scrollY / viewportHeight) * 100;
+
     let leftText = document.getElementById('text-left');
     let rightText = document.getElementById('text-right');
-    leftText.style.opacity = 0;
-    rightText.style.opacity = 0;
+    let centerText = document.getElementById('text-center');
 
-
-    if (scrollY > 1130) {
+    if (scrollYInVH > 150 && scrollYInVH < 200 && currentSection !== 'welcome') { 
+        leftText.textContent = 'Welcome';
         leftText.style.opacity = 1;
-        leftText.style.transition = 'opacity 0.5s ease-in-out';
-    }
-
-    if (scrollY > 2000) {
+        currentSection = 'welcome';
+    } else if (scrollYInVH > 200 && scrollYInVH < 250) {
         leftText.style.opacity = 0;
-        leftText.style.transition = 'opacity 0.5s ease-in-out';
-        setTimeout(() => leftText.textContent = "My name is...", 700);
-        
-    }
-
-    if (scrollY > 5000) {
+        rightText.style.opacity = 0;
+    }else if (scrollYInVH > 250 && scrollYInVH < 300 && currentSection !== 'myname') {
+        leftText.textContent = 'My name is...';
         leftText.style.opacity = 1;
-        leftText.style.transition = 'opacity 0.5s ease-in-out';
-    }
-
-    if (scrollY > 7000) {
+        centerText.style.opacity = 0;
+        rightText.style.opacity = 0;
+        currentSection = 'myname';
+    }else if (scrollYInVH > 300 && scrollYInVH < 400 && currentSection !== 'name') {
+        leftText.textContent = 'My name is...';
+        rightText.textContent = "Yahshua"
+        centerText.style.opacity = 0;
+        leftText.style.opacity = 1;
         rightText.style.opacity = 1;
-        rightText.style.transition = 'opacity 0.5s ease-in-out';
-    }
+        currentSection = 'name';
+    } else if (scrollYInVH > 450 && scrollYInVH < 500 && currentSection !== 'hope') {
+        centerText.style.opacity = 1;
+        leftText.style.opacity = 0;
+        rightText.style.opacity = 0;
+        currentSection = 'hope';
+
+    } 
     
 
 })
