@@ -9,11 +9,13 @@ window.addEventListener('scroll', () => {
     let rightText = document.getElementById('text-right');
     let centerText = document.getElementById('text-center');
 
-    if (scrollYInVH > 150 && scrollYInVH < 200 && currentSection !== 'welcome') { 
+    if (scrollYInVH < 150) {
+        leftText.style.opacity = 0;
+    }else if (scrollYInVH > 150 && scrollYInVH < 200 && currentSection !== 'welcome') { 
         leftText.textContent = 'Welcome';
         leftText.style.opacity = 1;
         currentSection = 'welcome';
-    } else if (scrollYInVH > 200 && scrollYInVH < 250) {
+    }else if (scrollYInVH > 200 && scrollYInVH < 250) {
         leftText.style.opacity = 0;
         rightText.style.opacity = 0;
     }else if (scrollYInVH > 250 && scrollYInVH < 300 && currentSection !== 'myname') {
@@ -29,13 +31,13 @@ window.addEventListener('scroll', () => {
         leftText.style.opacity = 1;
         rightText.style.opacity = 1;
         currentSection = 'name';
-    } else if (scrollYInVH > 450 && scrollYInVH < 500 && currentSection !== 'hope') {
+    }else if (scrollYInVH > 450 && scrollYInVH < 500 && currentSection !== 'hope') {
         centerText.style.opacity = 1;
         leftText.style.opacity = 0;
         rightText.style.opacity = 0;
         currentSection = 'hope';
 
-    } 
+    }
     
 
 })
