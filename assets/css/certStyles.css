@@ -1,0 +1,60 @@
+#certifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20vh 2vw;
+    height: 600vh;
+    width: 100%;
+    background-color: #141414;
+    color: white;
+    font-family: garamond, serif;
+    font-size: 5rem;
+}
+
+.cert {
+    width: 50%;
+    height: 30%;
+    border-radius: 10px;
+    margin: 10vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#python {
+    background-image: url('../../assets/images/certifications/YH_Python_Nov1.png');
+}
+
+#html-css {
+    background-image: url('../../assets/images/certifications/YH_HTML&CSS_Dec16.png');
+}
+
+#javascript {
+    background-image: url('../../assets/images/certifications/YH_JS_Jan23.png');
+}
+
+#java {
+    background-image: url('../../assets/images/certifications/YH_Java_Feb24.png');
+}
+
+#databases {
+    background-image: url('../../assets/images/certifications/YH_Databases_Mar5.png');
+}
+
+#softwaredev {
+    background-image: url('../../assets/images/certifications/YH_Software-Development_Mar31.png');
+}
+
+#computationalthinking {
+    background-image: url('../../assets/images/certifications/YH_Computational-Thinking_Apr1.png');
+}
+
+#csharp {
+    background-image: url('../../assets/images/certifications/YH_C-Sharp_Apr15.jpg');
+}
+
+#fccbackend {
+    background-image: url('../../assets/images/certifications/YH_Back-End-Dev_Apr22.jpg');
+}
+

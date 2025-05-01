@@ -1,0 +1,42 @@
+#welcome {
+    height: 600vh;
+    width: 100%;
+    background-color: #141414;
+    color: white;
+    font-family: garamond, serif;
+    font-size: 5rem;
+    padding-bottom: 20vh;
+}
+
+#text-left {
+    text-align: left;
+    position: sticky;
+    top: 30vh;
+    width: 50vw;
+    left: 10vw;
+    font-size: 10vw;
+    opacity: 0;
+}
+
+#text-right {
+    text-align: right;
+    position: sticky;
+    top: 50vh;
+    left: 30vw;
+    width: 50vw;
+    font-size: 17vw;
+
+}
+
+#text-center {
+    text-align: center;
+    position: sticky;
+    top:50vh;
+    font-size: 7vw;
+}
+
+#text-center, #text-left, #text-right {
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
