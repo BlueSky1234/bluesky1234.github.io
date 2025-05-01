@@ -9,9 +9,9 @@ window.addEventListener('scroll', () => {
     let rightText = document.getElementById('text-right');
     let centerText = document.getElementById('text-center');
 
-    if (scrollYInVH < 150) {
+    if (scrollYInVH < 100) {
         leftText.style.opacity = 0;
-    }else if (scrollYInVH > 150 && scrollYInVH < 200 && currentSection !== 'welcome') { 
+    }else if (scrollYInVH > 100 && scrollYInVH < 200 && currentSection !== 'welcome') { 
         leftText.textContent = 'Welcome';
         leftText.style.opacity = 1;
         currentSection = 'welcome';

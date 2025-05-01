@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -7,11 +11,16 @@ body, html {
     height: 100vh;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: #020202;
+    background-color: #272727;
+    border: 0.2vh solid #000000;
     width: 100%;
     height: 7vh;
     position: fixed;
@@ -24,13 +33,14 @@ body, html {
 .navbar {
     flex: 1;
     margin: 0 1px;
-    display: inline;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #353535;
-    width: 20vw; 
+    background-color: #363636;
+    width: 25vw; 
     height: 100%;
-    border: none;
+    border: 1px solid #5e5e5e;
+    border-radius: 2px;
     color: white;
     font-family: 'Times New Roman', serif;
     font-size: 2vh;
@@ -38,20 +48,18 @@ body, html {
     padding: auto;
     text-decoration: none;
     z-index:10;
-    
+    transition: all 0.2s ease;
 }
 
 .navbar:hover {
     background-color: #3d3d3d;
-    transform: scale(1.01);
-    transition: all 0.3s ease;
 }
 
 #portfolio-picture {
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     background-color:#8f8f8f;
-    margin-top: 8.5vh;
+    margin-top: 7vh;
     margin-bottom: 0;
 }
 
@@ -63,7 +71,7 @@ body, html {
 
 #welcome {
     height: 600vh;
-    width: 100vw;
+    width: 100%;
     background-color: #141414;
     color: white;
     font-family: garamond, serif;
