@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -26,8 +27,6 @@
     width: 4px;
     height: 20vh;
     background: linear-gradient(to bottom, #2f2f2f, #696969);
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,24 +60,10 @@
     background: linear-gradient(to bottom,#3f3f3f, #2f2f2f);
     border-radius: 5px;
     color: rgb(228, 228, 228);
-    width: 20vw;
-    height: 15vh;
+    width: 40%;
+    height: 90%;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
     z-index: 3;
-}
-
-.timeline-content > h2 {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.timeline-content > p {
-    font-size: 12px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-}
-
-.timeline-content > p, .timeline-content > h {
-    z-index: 10;
 }
 
 .timeline-content:hover {
@@ -100,13 +85,78 @@
 }
 
 .timeline-header {
+    font-size:1rem;
+    font-family: 'Courier New', Courier, monospace;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 .timeline-paragraph {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
     margin-top: 0;
 }
+
+@media (max-width: 600px) {
+    .timeline-content-container {
+        width: 50%
+    }
+
+    .timeline-content-container.left {
+        position: absolute;
+        justify-content: left;
+    }
+    
+    .timeline-content-container.right {
+        position: absolute;
+        justify-content: right;
+    }
+    
+    .timeline-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(to bottom,#3f3f3f, #2f2f2f);
+        border-radius: 5px;
+        color: rgb(228, 228, 228);
+        padding: 2px;
+        width: 45%;
+        height: 75%;
+        transition: box-shadow 0.5s ease, transform 0.5s ease;
+        z-index: 3;
+    }
+
+    .timeline-header {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .timeline-paragraph {
+        font-size: clamp(0.5rem, 2vw, 1.2rem);;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .timeline-paragraph, .timeline-header {
+    z-index: 10;
+}
+
+
+.timeline-hr {
+    width: 80%;
+    border: 2px solid white;
+    margin-top: 0px;
+}
+}
+
+.timeline-paragraph, .timeline-header {
+    z-index: 10;
+}
+
 
 .timeline-hr {
     width: 80%;

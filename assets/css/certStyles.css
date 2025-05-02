@@ -2,23 +2,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20vh 2vw;
-    height: 600vh;
+    padding: 10vh 2vw;
+    height: 200vh;
     width: 100%;
     background-color: #141414;
     color: white;
     font-family: garamond, serif;
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 3vh ,5rem);
 }
 
 .cert {
-    width: 50%;
-    height: 30%;
-    border-radius: 10px;
-    margin: 10vh;
+    width: 20vw;
+    height: 15vw;
+    margin: 4vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: all 0.3s ease;
+    border: 0.5vw solid #683f34
+}
+
+.cert:hover {
+    transform: scale(1.1);
+}
+
+#certifications > h3 {
+    font-size: 3vw;
+    background-color: #333;
+    border: 2px solid rgb(110, 113, 116); 
+    border-radius: 10px;
+    width: 50%;
+    height: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#front-end, #back-end, #general {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     
 }
 
