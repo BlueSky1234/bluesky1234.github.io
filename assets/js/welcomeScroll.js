@@ -9,9 +9,9 @@ window.addEventListener('scroll', () => {
     let rightText = document.getElementById('text-right');
     let centerText = document.getElementById('text-center');
 
-    if (scrollYInVH < 100) {
+    if (scrollYInVH < 70) {
         leftText.style.opacity = 0;
-    }else if (scrollYInVH > 100 && scrollYInVH < 200 && currentSection !== 'welcome') { 
+    }else if (scrollYInVH > 70 && scrollYInVH < 200 && currentSection !== 'welcome') { 
         leftText.textContent = 'Welcome';
         leftText.style.opacity = 1;
         currentSection = 'welcome';
@@ -36,7 +36,8 @@ window.addEventListener('scroll', () => {
         leftText.style.opacity = 0;
         rightText.style.opacity = 0;
         currentSection = 'hope';
-
+    } else {
+        currentSection = null;
     }
     
 
